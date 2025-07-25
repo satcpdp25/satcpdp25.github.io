@@ -85,3 +85,74 @@ footer {
   text-align: center;
   border-top: 1px solid #9370db; /* Purple border */
 }
+
+.table-container {
+    overflow-x: auto; /* Ensures horizontal scrolling on smaller screens */
+    margin-top: 30px;
+    margin-bottom: 50px; /* Add some space below the table */
+}
+
+table {
+    width: 100%;
+    border-collapse: separate; /* Allows for border-radius on cells */
+    border-spacing: 0; /* Removes default spacing between cells */
+    background-color: #ffffff;
+    border-radius: 12px; /* More rounded corners for the table */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Slightly more prominent shadow */
+    overflow: hidden; /* Ensures content respects border-radius */
+}
+
+
+table th,
+table td {
+    padding: 18px 25px; /* Increased padding for more breathing room */
+    text-align: left;
+    border-bottom: 1px solid #eee; /* Very light separator lines */
+    border-left: 1px solid #eee; /* Add left border */
+    border-right: 1px solid #eee; /* Add right border */
+}
+
+table th {
+    background-color: #6a5acd; /* Deeper purple for header background */
+    color: #fff;
+    font-weight: 600; /* Slightly bolder */
+    text-transform: uppercase;
+    font-size: 0.95em; /* Slightly larger font for header */
+    letter-spacing: 0.05em; /* Subtle letter spacing */
+    white-space: nowrap; /* Prevent wrapping in header cells */
+}
+
+/* Rounded corners for the first and last header cells */
+table th:first-child {
+    border-top-left-radius: 12px;
+    border-left: none;
+}
+table th:last-child {
+    border-top-right-radius: 12px;
+     border-right: none;
+}
+
+
+table tbody tr:nth-child(even) {
+    background-color: #fcfcfc; /* Very subtle lighter shade for zebra striping */
+}
+
+table tbody tr:hover {
+    background-color: #e6e6fa; /* Light periwinkle on hover */
+    cursor: pointer; /* Indicates interactivity */
+}
+
+table td {
+    vertical-align: top; /* Aligns content to the top for multi-line cells */
+}
+
+table td:first-child {
+    white-space: nowrap; /* Prevents time slots from wrapping */
+    font-weight: bold;
+    color: #9370db; /* Medium purple for time slots */
+}
+
+/* Remove bottom border from the last row */
+table tbody tr:last-child td {
+    border-bottom: none;
+}
